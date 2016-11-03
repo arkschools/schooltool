@@ -1,0 +1,11 @@
+=== modified file 'src/schooltool/paste/schooltool_template/paste.ini_tmpl'
+--- src/schooltool/paste/schooltool_template/paste.ini_tmpl	2013-07-17 15:38:01 +0000
++++ src/schooltool/paste/schooltool_template/paste.ini_tmpl	2016-11-02 16:01:58 +0000
+@@ -16,5 +16,5 @@
+ 
+ [server:main]
+ use = egg:Paste#http
+-host = 127.0.0.1
++host = 0.0.0.0
+ port = 7080
+

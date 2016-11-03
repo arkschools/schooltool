@@ -1,0 +1,9 @@
+schooltool:
+  build: images/schooltool
+  ports:
+    - "22:22"
+    - "7080:7080"
+  volumes:
+    - .:/home/schooltool
+  environment:
+    - UID

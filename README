@@ -1,0 +1,13 @@
+To make a schooltool development environment, run:
+- docker-compose build
+- export UID (to configure container schooltool user with the same UID that the current linux user)
+- docker-compose up -d
+- ssh schooltool@localhost (add your public ssh key to .ssh/authorized_keys if needed)
+- In the previously opened ssh console:
+  - cd sandbox
+  - make
+  - cd schooltool.peas (or schooltool.isli or schooltool.rising)
+  - make develop
+  - make run
+
+You can now visit http://localhost:7080
