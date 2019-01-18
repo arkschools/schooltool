@@ -11,3 +11,13 @@ To make a schooltool development environment, run:
   - make run
 
 You can now visit http://localhost:7080
+
+Notes to release a new version:
+
+-Merge source changes with package branch: bzr merge <branch>
+-Edit changes, version and debian/changelog
+-Commit and push: bzr add .; bzr commit; bzr push :parent
+-make release. Move dist/tar.gz to parent with orig.tar.gz format
+-dpkg-buildpackage -us -uc -S
+-Sign changes with debsign schooltool.peas_<version>-0ubuntu1_source.changes
+-Put signed changes to PPA: dput schooltool.ark <source.changes>
